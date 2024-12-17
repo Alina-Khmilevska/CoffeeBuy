@@ -1,0 +1,77 @@
+@use 'variables' as *;
+
+// Container
+@mixin container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: $container-padding;
+    
+    @include respond-to(lg) {
+      padding: $container-padding-tablet;
+    }
+    
+    @include respond-to(sm) {
+      padding: $container-padding-mobile;
+    }
+  }
+
+
+// Media queries
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == sm {
+      @media (min-width: $breakpoint-sm) { @content; }
+    }
+    @if $breakpoint == md {
+      @media (min-width: $breakpoint-md) { @content; }
+    }
+    @if $breakpoint == lg {
+      @media (min-width: $breakpoint-lg) { @content; }
+    }
+    @if $breakpoint == xl {
+      @media (min-width: $breakpoint-xl) { @content; }
+    }
+  }
+
+  // Flexbox helpers
+  @mixin flex-between($gap: 0) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @if $gap > 0 {
+      gap: $gap;
+    }
+  }
+
+  @mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  // Text helpers
+  @mixin text-style($size: 16px, $weight: 400, $line-height: 130%) {
+    font-family: $font-primary;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+    font-style: normal;
+  }
+
+  // Buttons
+  @mixin button($width: 174px, $padding-y: 13px, $padding-x: 48px, $bg-color: $color-primary-blue) {
+    @include text-style(16px, 500);
+    width: $width;
+    padding: $padding-y $padding-x;
+    border-radius: $border-radius-pill;
+    border: 1px solid $bg-color;
+    background: $bg-color;
+    color: $color-light;
+    transition: $transition-default;
+    
+    &:hover {
+      background: $color-light;
+      color: $bg-color;
+    }
+  }
+  

@@ -1,0 +1,24 @@
+ <meta name="title" content="CoffeeBuy - Premium Coffee Delivered to Your Door">
+    <meta name="description" content="Experience the finest selection of premium coffee beans delivered straight to your doorstep. From single-origin to artisanal blends, find your perfect cup at CoffeeBuy.">
+    <meta name="keywords" content="coffee, premium coffee, coffee delivery, coffee beans, artisanal coffee, coffee subscription, buy coffee online">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://coffeebuy.com/">
+    <meta property="og:title" content="CoffeeBuy - Premium Coffee Delivered to Your Door">
+    <meta property="og:description" content="Experience the finest selection of premium coffee beans delivered straight to your doorstep. From single-origin to artisanal blends, find your perfect cup at CoffeeBuy.">
+    <meta property="og:image" content="https://coffeebuy.com/images/social-preview.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://coffeebuy.com/">
+    <meta property="twitter:title" content="CoffeeBuy - Premium Coffee Delivered to Your Door">
+    <meta property="twitter:description" content="Experience the finest selection of premium coffee beans delivered straight to your doorstep. From single-origin to artisanal blends, find your perfect cup at CoffeeBuy.">
+    <meta property="twitter:image" content="https://coffeebuy.com/images/social-preview.jpg">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    

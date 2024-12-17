@@ -1,0 +1,251 @@
+@use "../abstract" as *;
+
+section {
+    &.hero,
+    &.about {
+        .container {
+            @include flex-between(30px);
+
+            .content {
+                flex: 1;
+
+                .title {
+                    @include text-style(40px, 700);
+                }
+
+                .text {
+                    margin-top: 18px;
+                    @include text-style;
+                }
+            }
+        }
+    }
+
+    &.hero {
+        .container {
+            flex-direction: row-reverse;
+        }
+
+        .hero {
+            &__label {
+                @include text-style(12px, 500);
+                color: $color-primary-blue;
+            }
+
+            &__button {
+                @include button($bg-color: $color-orange);
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &.about {
+        .about {
+            &__link {
+                @include text-style(16px, 500);
+                color: $color-primary-blue;
+                transition: $transition-default;
+
+                &:hover {
+                    color: $color-dark;
+                }
+            }
+        }
+    }
+}
+
+.products {
+    margin-top: 30px;
+
+    &__header {
+        @include flex-between;
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        @include text-style(32px, 700, 120%);
+        color: $color-dark;
+    }
+
+    &__link {
+        @include text-style(16px, 500);
+        color: $color-secondary;
+        transition: $transition-default;
+
+        &:hover {
+            color: $color-dark;
+        }
+    }
+
+    &__grid {
+        @include flex-between(30px);
+    }
+}
+
+.product-card {
+    background: $color-light;
+    border-radius: 50px;
+    padding: 60px 85px;
+    text-align: center;
+
+    &__image {
+        position: relative;
+        margin-bottom: 25px;
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    &__discount {
+        position: absolute;
+        top: -35px;
+        right: 0;
+        background: $color-secondary;
+        color: $color-light;
+        padding: 20px 10px;
+        border-radius: 100px;
+        @include text-style(20px, 600);
+    }
+
+    &__title {
+        @include text-style(20px, 600);
+        color: $color-dark;
+        margin-bottom: 8px;
+    }
+
+    &__weight {
+        @include text-style(16px, 400);
+        color: #282828;
+        margin-bottom: 15px;
+    }
+
+    &__prices {
+        @include flex-center;
+        gap: 40px;
+        margin-bottom: 16px;
+    }
+
+    &__price {
+        @include text-style(20px, 600);
+        color: $color-dark;
+
+        &--old {
+            color: $color-secondary;
+            text-decoration: line-through;
+        }
+    }
+
+    &__counter {
+        @include flex-between(40px);
+        border-radius: 25px;
+        padding: 12px 20px;
+        background-color: white;
+    }
+
+    &__btn {
+        @include text-style(16px, 600);
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color-dark;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-primary-blue;
+        }
+    }
+
+    &__input {
+        width: 40px;
+        text-align: center;
+        border: none;
+        @include text-style(16px, 500);
+        color: $color-dark;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+
+    &__add {
+        margin-top: 10px;
+        @include button($padding-y: 12px, $padding-x: 22px, $bg-color: $color-orange);
+    }
+}
+
+.subscribe {
+    padding: 80px 0;
+
+    &__content {
+        @include flex-between;
+        gap: 40px;
+
+        @media (max-width: $breakpoint-md) {
+            flex-direction: column;
+        }
+    }
+
+    &__form {
+        max-width: 378px;
+    }
+
+    &__title {
+        @include text-style(18px, 600, 150%);
+        color: $color-dark;
+        margin-bottom: 24px;
+    }
+
+    &__input-group {
+        display: flex;
+    }
+
+    &__input {
+        flex: 1;
+        border: 1px solid rgba(40, 40, 40, 0.5);
+        background: none;
+        padding: 0 22px;
+        @include text-style(16px, 400);
+        color: $color-dark;
+        border-radius: 25px 0px 0px 25px;
+
+        &::placeholder {
+            color: #777;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__button {
+        @include button($bg-color: $color-dark);
+        padding: 13px 24px;
+        border-radius: 0px 25px 25px 0px;
+    }
+
+    &__info {
+        max-width: 460px;
+        text-align: left;
+
+        @media (max-width: $breakpoint-md) {
+            text-align: left;
+        }
+    }
+
+    &__text {
+        @include text-style(16px, 700, 180%);
+        color: black;
+        margin-bottom: 24px;
+    }
+
+    &__logo {
+        height: 24px;
+        width: auto;
+        margin-left: auto;
+    }
+}

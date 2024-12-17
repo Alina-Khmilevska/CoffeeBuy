@@ -1,0 +1,27 @@
+// Layout
+$container-max-width: 1440px;
+$container-padding: 30px 125px;
+$container-padding-tablet: 0 40px;
+$container-padding-mobile: 0 20px;
+
+// Colors
+$color-dark: #282828;
+$color-primary-blue: #3C6BFF;
+$color-light: #EEE;
+$color-orange: #F90;
+$color-secondary: #FF3939;
+
+// Borders
+$border-radius-pill: 25px;
+
+// Typography
+$font-primary: 'Montserrat', sans-serif;
+
+// Transitions
+$transition-default: all 0.3s ease-in-out;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

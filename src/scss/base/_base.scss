@@ -1,0 +1,25 @@
+@use '../abstract' as *;
+
+body {
+    background-color: #FDFDFD;
+    font-family: $font-primary;
+}
+
+.container {
+  margin: 0 auto;
+  padding: $container-padding-mobile;
+  max-width: $container-max-width;
+  width: 100%;
+  
+  @media (min-width: $breakpoint-lg) {
+    padding: $container-padding-tablet;
+  }
+  
+  @media (min-width: $breakpoint-xl) {
+    padding: $container-padding;
+  }
+  
+  &--fluid {
+    max-width: none;
+  }
+}

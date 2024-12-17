@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Compiled files
+dist/
+build/
+*.css.map
+
+# IDE and editors
+.vscode/
+.idea/
