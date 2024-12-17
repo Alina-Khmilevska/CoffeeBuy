@@ -1,25 +1,14 @@
-@use '../abstract' as *;
+@use "../abstract" as *;
 
 body {
-    background-color: #FDFDFD;
-    font-family: $font-primary;
+  background-color: #fdfdfd;
+  font-family: $font-primary;
+
+  &.menu-open {
+    overflow: hidden;
+  }
 }
 
 .container {
-  margin: 0 auto;
-  padding: $container-padding-mobile;
-  max-width: $container-max-width;
-  width: 100%;
-  
-  @media (min-width: $breakpoint-lg) {
-    padding: $container-padding-tablet;
-  }
-  
-  @media (min-width: $breakpoint-xl) {
-    padding: $container-padding;
-  }
-  
-  &--fluid {
-    max-width: none;
-  }
+  @include container;
 }

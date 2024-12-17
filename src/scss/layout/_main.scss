@@ -79,6 +79,10 @@ section {
 
     &__grid {
         @include flex-between(30px);
+        @include respond-to(xxl) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 }
 
@@ -175,6 +179,10 @@ section {
     &__add {
         margin-top: 10px;
         @include button($padding-y: 12px, $padding-x: 22px, $bg-color: $color-orange);
+    }
+
+    @include respond-to(lg) {
+        padding: 30px 55px;
     }
 }
 
