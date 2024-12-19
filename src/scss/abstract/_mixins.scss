@@ -74,6 +74,12 @@
   font-style: normal;
 }
 
+@mixin mobile-text-style($size: 12px) {
+  @include respond-to(sm) {
+    font-size: $size;
+  }
+}
+
 // Buttons
 @mixin button($width: 174px, $padding-y: 13px, $padding-x: 48px, $bg-color: $color-primary-blue) {
   @include text-style(16px, 500);
