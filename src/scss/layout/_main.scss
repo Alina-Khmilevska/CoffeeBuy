@@ -5,17 +5,36 @@ section {
     &.about {
         .container {
             @include flex-between(30px);
+            @include respond-to(lg) {
+                flex-direction: column;
+            }
 
             .content {
                 flex: 1;
+                @include respond-to(xl) {
+                    flex: 3;
+                }
 
                 .title {
                     @include text-style(40px, 700);
+                    @include mobile-text-style(24px);
                 }
 
                 .text {
                     margin-top: 18px;
                     @include text-style;
+                }
+            }
+
+            .image {
+                @include respond-to(xl) {
+                    flex: 2;
+                }
+                @include respond-to(lg) {
+                    img {
+                        width: 75%;
+                        margin: 0 auto;
+                    }
                 }
             }
         }
@@ -24,6 +43,9 @@ section {
     &.hero {
         .container {
             flex-direction: row-reverse;
+            @include respond-to(lg) {
+                flex-direction: column;
+            }
         }
 
         .hero {
@@ -210,6 +232,9 @@ section {
 
     &__input-group {
         display: flex;
+        @include respond-to(sm) {
+            flex-direction: column;
+        }
     }
 
     &__input {
@@ -228,12 +253,23 @@ section {
         &:focus {
             outline: none;
         }
+
+        @include respond-to(sm) {
+            padding: 11px 22px;
+            border-radius: 25px;
+            margin-bottom: 10px;
+        }
     }
 
     &__button {
         @include button($bg-color: $color-dark);
         padding: 13px 24px;
         border-radius: 0px 25px 25px 0px;
+        @include respond-to(sm) {
+            padding: 11px 22px;
+            border-radius: 25px;
+            width: 100%;
+        }
     }
 
     &__info {
